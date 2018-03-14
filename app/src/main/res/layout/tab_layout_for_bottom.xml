@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:orientation="horizontal"
+    android:background="@color/color_f6fcff"
+    >
+
+    <TextView
+        android:id="@+id/tv_home"
+        style="@style/viewpager_navigation_bar_tab_style"
+        android:drawableTop="@mipmap/tab_home2"
+        android:background="@drawable/selector_bottom_tab"
+        android:text="首页"/>
+
+    <TextView
+        android:id="@+id/tv_record"
+        style="@style/viewpager_navigation_bar_tab_style"
+        android:drawableTop="@mipmap/tab_record2"
+        android:background="@drawable/selector_bottom_tab"
+        android:text="记录"/>
+
+
+    <TextView
+        android:id="@+id/tv_me"
+        style="@style/viewpager_navigation_bar_tab_style"
+        android:drawableTop="@mipmap/tab_mine2"
+        android:background="@drawable/selector_bottom_tab"
+        android:text="我的"/>
+
+
+
+</LinearLayout>

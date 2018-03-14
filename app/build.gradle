@@ -1,0 +1,122 @@
+import com.android.build.gradle.api.BaseVariant
+
+apply plugin: 'com.android.application'
+apply plugin: 'walle'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.zyhkj88"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        sankuai {
+            storeFile file("zyhkj_key.jks")
+            storePassword "123456"
+            keyAlias "zyhkj"
+            keyPassword "123456"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.sankuai
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.sankuai
+            applicationIdSuffix 'debug'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+walle {
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels")
+    apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}-${flavorName}.apk'
+    //configFile与channelFile两者必须存在一个，否则无法生成渠道包。两者都存在时优先执行configFile
+    channelFile = new File("${project.getProjectDir()}/channel")
+    //configFile = new File("${project.getProjectDir()}/config.json")
+    // 生成渠道包 ./gradlew clean assembleReleaseChannels
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:palette-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+
+    compile 'com.android.support:multidex:1.0.1'
+    // 美团打包
+    implementation 'com.meituan.android.walle:library:1.1.6'
+
+    // 解析JSON
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    // retrofit 2
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    // RxJava 2
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    // okhttp 3
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    debugImplementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    // 权限管理
+    implementation 'com.yanzhenjie:permission:2.+'
+    //implementation 'com.yanzhenjie.alertdialog:alertdialog:1.0.1'
+
+    //资源初始化工具
+    compile 'com.jakewharton:butterknife:7.0.1'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+
+    // 底部导航栏
+    //implementation 'com.github.chaychan:BottomBarLayout:1.1.1'
+
+    // 加载
+    implementation 'com.github.nukc.stateview:library:1.2.1'
+
+    // 状态栏
+    // implementation 'com.jaeger.statusbaruitl:library:1.4.0'
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    // 滑动返回
+    implementation 'cn.bingoogolapple:bga-swipebacklayout:1.1.8@aar'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+}
+
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="tab_bg">#F3F5F4</color>
+    <color name="common_grey">#515051</color>
+    <color name="status_color_red">#D33D3C</color>
+
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_363636">#363636</color>
+    <color name="color_8b8b8b">#8b8b8b</color>
+    <color name="color_B3B3B3">#B3B3B3</color>
+    <color name="color_DBDBDB">#DBDBDB</color>
+    <color name="color_F9F9F9">#F9F9F9</color>
+    <color name="color_3988fd">#3988fd</color>
+    <color name="color_67baff">#67baff</color>
+    <color name="color_0666EB">#0666EB</color>
+    <color name="color_128bed">#128bed</color>
+    <color name="color_cadffe">#cadffe</color>
+    <color name="color_009dff">#009dff</color>
+    <color name="color_f2f9fe">#f2f9fe</color>
+
+    <color name="color_f6fcff">#f9f9f9</color>
+
+    <color name="subscribe_category_bar_bg_night">#cc363636</color>
+
+
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="lite_blue">#ff359ff2</color>
+    <color name="window_background">#00000000</color>
+    <color name="black_de">#DE000000</color>
+
+</resources>

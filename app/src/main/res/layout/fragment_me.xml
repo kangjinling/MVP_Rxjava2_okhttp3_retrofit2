@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    >
+
+
+
+
+    <ImageView
+        android:id="@+id/me_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/me_minerindex"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_72"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/me_miner"/>
+
+        <TextView
+            android:id="@+id/mTv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13199999999"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_15"
+            />
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/me_body_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/me_top_bg"
+        android:fadingEdge="none"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/mTv_pay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/me_text_a"
+                    android:layout_centerVertical="true"
+                    android:text="充值"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/me_right"
+                    android:layout_alignParentRight="true"
+                    android:text="充值手续费全免"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_8b8b8b"
+                    android:textSize="@dimen/sp_11"
+                    android:paddingRight="@dimen/dp_12"
+                    />
+
+            </RelativeLayout>
+
+            <View style="@style/Line_12"></View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_18">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/mTv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000.00"
+                        style="@style/me_text_b"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账户余额（元）"
+                        android:layout_marginTop="@dimen/dp_6"
+                        style="@style/me_text_c"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/me_vertical"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/mTv_addUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000.00"
+                        style="@style/me_text_b"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计充值（元）"
+                        android:layout_marginTop="@dimen/dp_6"
+                        style="@style/me_text_c"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/me_vertical"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/mTv_consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000.00"
+                        style="@style/me_text_b"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="累计消费（元）"
+                        android:layout_marginTop="@dimen/dp_6"
+                        style="@style/me_text_c"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/Line_12"></View>
+            <TextView
+                android:id="@+id/mTv_pay_record"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:drawableRight="@mipmap/me_right"
+                style="@style/me_text_a"
+                android:text="充值记录"/>
+            <View style="@style/Line_me"></View>
+
+            <TextView
+                android:id="@+id/mTv_consume_record"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:drawableRight="@mipmap/me_right"
+                style="@style/me_text_a"
+                android:text="消费记录"/>
+            <View style="@style/Line_me"></View>
+            <TextView
+                android:id="@+id/mTv_user_setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:drawableRight="@mipmap/me_right"
+                style="@style/me_text_a"
+                android:text="账号设置"/>
+            <View style="@style/Line_me"></View>
+            <TextView
+                android:id="@+id/mTv_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:drawableRight="@mipmap/me_right"
+                style="@style/me_text_a"
+                android:text="关于我们"/>
+            <View style="@style/Line_me"></View>
+            <TextView
+                android:id="@+id/mTv_login_out"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:drawableRight="@mipmap/me_right"
+                style="@style/me_text_a"
+                android:text="退出登录"/>
+            <View style="@style/Line_me"></View>
+
+            <TextView
+                android:id="@+id/mTv_versions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="版本号"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/sp_11"
+                android:textColor="@color/color_8b8b8b"
+                android:layout_marginTop="@dimen/dp_22"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

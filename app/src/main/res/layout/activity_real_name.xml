@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kang.ui.activity.RealNameActivity">
+
+    <include layout="@layout/include_toolbar"></include>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_65"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:orientation="vertical">
+        <com.kang.widget.ClearEditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            style="@style/editText_style"
+            android:drawableLeft="@mipmap/real_name"
+            android:inputType="text"
+            android:maxLength="16"
+            android:hint="请输入姓名"/>
+
+        <View
+            style="@style/Line_1" />
+
+        <com.kang.widget.ClearEditText
+            android:id="@+id/edt_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            style="@style/editText_style"
+            android:drawableLeft="@mipmap/real_card"
+            android:maxLength="18"
+            android:digits="0123456789X"
+            android:hint="请输入身份证"/>
+
+        <View
+            style="@style/Line_1" />
+
+
+        <Button
+            android:id="@+id/btn_real"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:text="提      交"
+            android:layout_marginTop="@dimen/dp_35"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_14"
+            android:background="@drawable/selector_submit_btn"
+            android:enabled="false"/>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:text="暂不认证，先跳过此步"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_3988fd"
+            android:textSize="@dimen/sp_14"
+            android:background="@null"
+            />
+
+
+
+    </LinearLayout>
+</RelativeLayout>
